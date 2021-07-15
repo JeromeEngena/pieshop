@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JavaSript</title>
+</head>
+<body>
+    <button id="click-me">Click Me</button>
+    <script>
+        /*variables*/
+        let firstName = "Jem";
+        let lastName = "Bry";
+        let twitter = "@jembry";
+
+        /*object literal*/
+        let person = {
+            firstName = "Jem",
+            lastName = "Bry",
+            twitter = "@jembry",
+            greet: function(){
+                console.log("My name is " + this.firstName)
+            }
+        };
+
+        person.greet(); 
+
+        /*arrays*/
+        let arr = [1, 2, 3, 4];
+        console.log(array);
+
+        let arr = ["Craig", "Alexis", "Sydney"];
+        console.log(array);
+
+        let array = [100, true, "JavaScript"];
+        console.log(array);
+        console.log(array[i]);
+        array.reverse();
+        array.length();
+        array.push("new item");
+
+        /*while loop*/
+        let count = 0;
+        let max = 10;
+
+        while(count < max){
+            console.log(count);
+            count = count + 1;
+        }
+
+        /*for loop*/
+        for (let i = 0; i < 10; i++){
+            console.log(i);
+        }
+
+        /* forEach loop*/
+        let days = ["Mon", "Tue", "Wed"];
+        days.forEach(function(day, index){
+            console.log(`day: ${day}, index: ${index}`);
+        });
+
+        /*events*/
+        window.addEventListener("DOMContentLoaded", function(e){
+            console.log("The page is loaded.");
+
+            let btn = document.querySelector("#click-me");
+            btn.addEventListener("click", function(e){
+                console.log("The button was clicked.");
+            });
+        });
+
+        window.addEventListener("orientationchange", function(e){
+            let screen = window.screen;
+            let angle = screen.orientation.angle;
+            let type = screen.orientation.type;
+            console.log(`angle: ${angle}, type: ${type}`);
+        });
+    </script>
+</body>
+</html>
